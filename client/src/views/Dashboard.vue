@@ -8,7 +8,7 @@
         <div class="funny-image" v-if="false">
             <img src="../assets/fun.jpg" alt="funny">
         </div>
-        <img v-if="!error" class="i-workshop" src="../assets/workshop.png" alt="Interlink workshop">
+        <img class="i-workshop" src="../assets/workshop.png" alt="Interlink workshop">
     </div>
 </template>
 

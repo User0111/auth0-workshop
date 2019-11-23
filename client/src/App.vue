@@ -24,7 +24,7 @@
         color: #fff !important;
         text-transform: uppercase;
         text-decoration: none;
-        background: red;
+        background: #d84a1b;
         padding: 20px;
         border-radius: 5px;
         display: inline-block;
