@@ -10,7 +10,7 @@
     }
 </script>
 
-<style>
+<style lang="scss">
     #app {
         font-family: 'Avenir', Helvetica, Arial, sans-serif;
         -webkit-font-smoothing: antialiased;
@@ -31,15 +31,19 @@
         border: none;
         transition: all 0.4s ease 0s;
         font-weight: 600;
-    }
 
-    button:hover {
-        background: #434343;
-        letter-spacing: 1px;
-        -webkit-box-shadow: 0 5px 40px -10px rgba(0, 0, 0, 0.57);
-        -moz-box-shadow: 0 5px 40px -10px rgba(0, 0, 0, 0.57);
-        box-shadow: 5px 40px -10px rgba(0, 0, 0, 0.57);
-        transition: all 0.4s ease 0s;
+        &:hover {
+            background: #434343;
+            letter-spacing: 1px;
+            -webkit-box-shadow: 0 5px 40px -10px rgba(0, 0, 0, 0.57);
+            -moz-box-shadow: 0 5px 40px -10px rgba(0, 0, 0, 0.57);
+            box-shadow: 5px 40px -10px rgba(0, 0, 0, 0.57);
+            transition: all 0.4s ease 0s;
+        }
+
+        &:focus {
+            outline: unset;
+        }
     }
 
     .error {
