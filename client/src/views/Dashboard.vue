@@ -2,7 +2,7 @@
     <div class="container">
         <div class="header">
             <router-link class="login-btn" tag="button" to="/login"><< Login</router-link>
-            <button class="logout">LOGOUT</button>
+            <app-profile-card/>
         </div>
         <app-users-list-card/>
         <div class="funny-image" v-if="false">
@@ -14,10 +14,11 @@
 
 <script>
     import AppUsersListCard from '../components/UsersListCard.vue';
+    import AppProfileCard from "../components/ProfileCard";
 
     export default {
         name: 'Dashboard',
-        components: {AppUsersListCard},
+        components: {AppUsersListCard, AppProfileCard},
     }
 </script>
 
@@ -30,7 +31,7 @@
             align-items: center;
 
 
-            .login-btn, .logout {
+            .login-btn {
                 width: 7rem;
             }
         }
