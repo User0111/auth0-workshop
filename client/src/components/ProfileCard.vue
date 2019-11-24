@@ -1,14 +1,14 @@
 <template>
-    <div class="container">
+    <div class="container" v-if="!$auth.loading">
         <div v-if="true" class="profile">
             <div class="avatar">
-                <img :src="user.picture" alt="avatar">
+                <img :src="$auth.user.picture" alt="avatar">
             </div>
             <span class="name">
-                {{user.name}}
+                {{$auth.user.name}}
             </span>
         </div>
-        <button class="logout">LOGOUT</button>
+        <button @click="logout" class="logout">LOGOUT</button>
     </div>
 </template>;
 <script>
@@ -21,8 +21,14 @@
                     name: 'Vladislav',
                 }
             }
-
-        }
+        },
+        methods: {
+            logout() {
+                this.$auth.logout({
+                    returnTo: window.location.origin
+                });
+            }
+        },
     }
 </script>
 

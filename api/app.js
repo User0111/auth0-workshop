@@ -6,15 +6,18 @@ const db = require('./config/db');
 const usersRouter = require('./routes/users');
 const app = express();
 const cors = require('cors');
+const jwtCheck = require('./services/auth');
 
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 app.use(cors());
 
+mongoose.connect(db.url, {useNewUrlParser: true, useUnifiedTopology: true});
+
+app.use(jwtCheck);
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-
-mongoose.connect(db.url, {useNewUrlParser: true, useUnifiedTopology: true});
 
 app.use(function (req, res, next) {
   next(createError(404));

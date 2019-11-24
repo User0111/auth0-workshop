@@ -10,7 +10,7 @@
             </router-link>
         </div>
         <div class="auth-wrapper">
-            <button class="login-btn">
+            <button v-if="!$auth.loading" @click="login" class="login-btn">
                 <img src="../assets/auth0-black.png" alt="auth0">
                 LOGIN WITH GOOGLE
             </button>
@@ -21,6 +21,11 @@
 <script>
     export default {
         name: 'Login',
+        methods: {
+            login() {
+                this.$auth.loginWithRedirect();
+            },
+        },
     }
 </script>
 
