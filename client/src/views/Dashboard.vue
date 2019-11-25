@@ -8,7 +8,7 @@
         <div class="funny-image" v-if="false">
             <img src="../assets/fun.jpg" alt="funny">
         </div>
-        <img class="i-workshop" src="../assets/workshop.png" alt="Interlink workshop">
+        <img class="i-workshop" src="../assets/workshop-logo.png" alt="Interlink workshop">
     </div>
 </template>
 
@@ -46,7 +46,7 @@
         }
 
         .i-workshop {
-            height: 20rem;
+            height: 25rem;
         }
     }
 </style>
