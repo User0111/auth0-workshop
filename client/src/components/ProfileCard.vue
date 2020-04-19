@@ -2,13 +2,15 @@
     <div class="container">
         <div v-if="true" class="profile">
             <div class="avatar">
-                <img :src="user.picture" alt="avatar">
+                <img :src="$auth.user.picture" alt="avatar">
             </div>
             <span class="name">
-                {{user.name}}
+                {{$auth.user.name}}
             </span>
         </div>
-        <button class="logout">LOGOUT</button>
+        <button class="logout" @click="logout" v-if="$auth.isAuthenticated">
+            LOGOUT
+        </button>
     </div>
 </template>;
 <script>
@@ -21,7 +23,11 @@
                     name: 'Vladislav',
                 }
             }
-
+        },
+        methods: {
+            logout() {
+                this.$auth.logout();
+            }
         }
     }
 </script>

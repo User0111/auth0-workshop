@@ -5,7 +5,7 @@
             <app-profile-card/>
         </div>
         <app-users-list-card/>
-        <div class="funny-image" v-if="false">
+        <div class="funny-image" v-if="true">
             <img src="../assets/fun.jpg" alt="funny">
         </div>
         <img class="i-workshop" src="../assets/workshop-logo.png" alt="Interlink workshop">
